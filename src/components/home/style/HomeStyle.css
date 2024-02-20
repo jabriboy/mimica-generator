@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.home {
+  background: #09003F;
+  color: #FFC72C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.home .home-center h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.home .home-center h1 span {
+  color: white;
+  margin-left: 1rem;
+}
+.home .home-center ol {
+  list-style: none; /* Remove a enumeração padrão */
+  margin: 1rem;
+  padding: 1rem 2rem;
+}
+.home .home-center ol li {
+  font-size: 2rem;
+}
+.home .home-center ol li::before {
+  content: counter(list-item, decimal) "-"; /* Usa o contador padrão decimal */
+  color: white; /* Define a cor dos números */
+  display: inline-block;
+  width: 1em; /* Ajusta o espaço para os números */
+  margin-left: -1em; /* Ajusta o espaço para os números */
+}
+.home .home-center .btn-gerar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFC72C;
+  color: #09003F;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto;
+}/*# sourceMappingURL=HomeStyle.css.map */

@@ -1,0 +1,59 @@
+.home{
+	background: #09003F;
+	color: #FFC72C;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	.home-center{
+		h1{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 3rem;
+			span{
+				color: white;
+				margin-left: 1rem;
+			}
+		}
+		ol{
+			list-style: none; /* Remove a enumeração padrão */
+			margin: 1rem;
+			padding: 1rem 2rem;
+			
+			li{
+				font-size: 2rem;
+			}
+		}
+		  
+		ol{
+			li::before{
+				content: counter(list-item, decimal) "-"; /* Usa o contador padrão decimal */
+				color: white; /* Define a cor dos números */
+				display: inline-block;
+				width: 1em; /* Ajusta o espaço para os números */
+				margin-left: -1em; /* Ajusta o espaço para os números */
+			}
+		}
+		ol{
+			
+		}
+		.btn-gerar{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #FFC72C;
+			color: #09003F;
+			width: fit-content;
+			padding: .2rem 1rem;
+			border-radius: 2rem;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0 auto;
+		}
+	}
+}
