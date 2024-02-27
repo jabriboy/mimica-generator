@@ -18,7 +18,7 @@ function Home(){
 		var palavraAntiga = ''
 		var mimicas = []
 
-		var total = 5
+		var total = value
 		var randomIndex = Math.floor(Math.random() * frases.length);
 		if(isFrases == true){
 			mimicas.push(frases[randomIndex])
@@ -46,12 +46,38 @@ function Home(){
 
 		setMimica(mimicas)
 	}
+
+	const [value, setValue] = useState(5);
+	
+	const handleIncrement = () => {
+		setValue(prevValue => prevValue + 1);
+	};
+	
+	const handleDecrement = () => {
+		if(value != 0){
+			setValue(prevValue => prevValue - 1);
+		}
+	};
+
 	return(
 		<>
 		<div className="home">
 			<div className="home-center">
 				<h1>mímica <span>generator</span></h1>
 				<ul>
+					<li>Quantidade</li>
+					<li>
+					<button onClick={handleDecrement}>-</button>
+					<input
+						type="number"
+						className="quantidade"
+						value={value}
+						onChange={(e) => setValue(parseInt(e.target.value))}
+						step="1"
+						readOnly
+					/>
+					<button onClick={handleIncrement}>+</button>
+					</li>
 					<li>Frases</li>
 					<li>
 						<label className="switch">
@@ -86,5 +112,6 @@ function Home(){
 		</>
 	)
 }
+
 
 export default Home;

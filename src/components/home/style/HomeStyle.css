@@ -108,4 +108,8 @@
 }
 .home .slider.round:before {
   border-radius: 50%;
+}
+.home .quantidade {
+  width: 1.3rem;
+  text-align: right;
 }/*# sourceMappingURL=HomeStyle.css.map */
