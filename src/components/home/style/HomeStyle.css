@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  /* Hide default checkbox */
+  /* Style the slider */
+  /* Rounded sliders */
 }
 .home .home-center h1 {
   display: flex;
@@ -49,4 +52,60 @@
   text-transform: uppercase;
   font-weight: bold;
   margin: 0 auto;
+}
+.home ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+.home ul li {
+  margin: 0 1rem;
+}
+.home .switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+.home .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.home .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.home .slider:before {
+  position: absolute;
+  content: "";
+  height: 18.2px;
+  width: 18.2px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  transition: 0.4s;
+}
+.home input:checked + .slider {
+  background-color: #2196F3;
+}
+.home input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.home input:checked + .slider:before {
+  transform: translateX(23px);
+}
+.home .slider.round {
+  border-radius: 34px;
+}
+.home .slider.round:before {
+  border-radius: 50%;
 }/*# sourceMappingURL=HomeStyle.css.map */
